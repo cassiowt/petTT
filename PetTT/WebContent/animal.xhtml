@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+	</h:head>
+	
+	<h:body>
+	
+	<h1>Animal</h1>
+	
+	<h:form>
+		
+		<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+			
+			<p:outputLabel for="apelido" value="Apelido:"/>
+			<p:inputText id="apelido" required="true"/>
+			
+			<p:outputLabel for="tipo" value="Tipo:" />
+		        <p:selectOneMenu id="tipo" value=" " style="width:125px" required="true">
+		            <f:selectItem itemValue=" " />
+		            <f:selectItems value=" "/>
+		        </p:selectOneMenu>
+ 
+			<p:outputLabel for="raca" value="Raça:" />
+			<p:inputText id="raca" value=" " required="true"/>
+			
+			<p:outputLabel for="caracteristicas" value="Características:" />
+			<p:inputTextarea id="caracteristicas" rows="6" cols="33" />
+			
+		</h:panelGrid>	
+			
+		<h:panelGrid columns="1">
+		
+			<p:commandButton value="Enviar" id="submitAnimalMB" styleClass="ui-priority-primary" />
+			<!-- action="ir para Lista animal" -->
+			
+			<p:commandButton value="Voltar" id="voltar" styleClass="ui-priority-primary" /> 
+			<!-- action="voltar a tela anterior" -->
+		
+		</h:panelGrid>
+	
+	</h:form>
+	<style>
+		.ui-priority-primary {
+			display:inline;
+		}	
+	</style>
+	</h:body>
+	
+</html>
