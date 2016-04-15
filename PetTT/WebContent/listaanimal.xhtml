@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+
+	<h1>Listado Animais</h1>
+
+	<h:form>
+
+		<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+
+			<p:dataTable var="Id" value="#{dtBasicView.cars}">
+				<p:column headerText="Id">
+					<h:outputText value="#{animalMB.id}" />
+				</p:column>
+
+				<p:column headerText="Tipo">
+					<h:outputText value="#{animalMB.tipo}" />
+				</p:column>
+
+				<p:column headerText="Raça">
+					<h:outputText value="#{animalMB.raca}" />
+				</p:column>
+
+				<p:column headerText="Apelido">
+					<h:outputText value="#{animalMB.apelido}" />
+				</p:column>
+				<p:column headerText="Características">
+					<h:outputText value="#{animalMB.caracteristicas}" />
+				</p:column>
+			</p:dataTable>
+			
+			
+			<p:commandButton value="Cadastra Outro" id="cadastraOutro" action="animal" styleClass="ui-priority-primary" />
+			<!-- action="ir para Lista animal" -->
+			
+			<p:commandButton value="Voltar" id="voltar" action="index" styleClass="ui-priority-primary" /> 
+			<!-- action="voltar a tela anterior" -->
+
+		</h:panelGrid>
+
+	</h:form>
+</h:body>
+
+</html>
