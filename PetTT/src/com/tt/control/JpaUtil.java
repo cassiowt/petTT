@@ -34,11 +34,10 @@ public class JpaUtil {
 	
 	public static void main(String[] args) {
 		getFactory().getTransaction().begin();
-		
-		Raca raca = new Raca("Labrador");		
-		Animal animal1 = new Animal("ANIMAL #1", TipoAnimal.CACHORRO, raca, "CARACTERISTICAS");
-		Animal animal2 = new Animal("ANIMAL #2", TipoAnimal.CACHORRO, raca, "CARACTERISTICAS");
-		Animal animal3 = new Animal("ANIMAL #3", TipoAnimal.CACHORRO, raca, "CARACTERISTICAS");
+			
+		Animal animal1 = new Animal("ANIMAL #1", TipoAnimal.CACHORRO, "Labrador", "CARACTERISTICAS");
+		Animal animal2 = new Animal("ANIMAL #2", TipoAnimal.CACHORRO, "Poodle", "CARACTERISTICAS");
+		Animal animal3 = new Animal("ANIMAL #3", TipoAnimal.CACHORRO, "Buldogue", "CARACTERISTICAS");
 		
 		Collection<Animal> animais = new ArrayList<Animal>();
 		animais.add(animal1);

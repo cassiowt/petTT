@@ -34,9 +34,11 @@ public class Animal implements Serializable {
 	@Column(name = "TIPO_ANIMAL", nullable = false)
 	private TipoAnimal tipoAnimal;
 
-	@OneToOne(cascade = {CascadeType.PERSIST})
-	@JoinColumn(name = "RACA_ID", foreignKey = @ForeignKey(name = "FK_ANIMAIS_RACA_ID") )
-	private Raca raca;
+//	@OneToOne(cascade = {CascadeType.PERSIST})
+//	@JoinColumn(name = "RACA_ID", foreignKey = @ForeignKey(name = "FK_ANIMAIS_RACA_ID") )
+//	private Raca raca;
+	@Column(name = "RACA", length = 255, nullable = false)
+	private String raca;
 
 	@Column(name = "CARACTERISTICAS", length = 255, nullable = false)
 	private String caracteristicas;
@@ -44,7 +46,7 @@ public class Animal implements Serializable {
 	public Animal() {
 	}
 
-	public Animal(String apelido, TipoAnimal tipoAnimal, Raca raca, String caracteristicas) {
+	public Animal(String apelido, TipoAnimal tipoAnimal, String raca, String caracteristicas) {
 		this.apelido = apelido;
 		this.tipoAnimal = tipoAnimal;
 		this.raca = raca;
@@ -75,11 +77,11 @@ public class Animal implements Serializable {
 		this.tipoAnimal = tipoAnimal;
 	}
 
-	public Raca getRaca() {
+	public String getRaca() {
 		return raca;
 	}
 
-	public void setRaca(Raca raca) {
+	public void setRaca(String raca) {
 		this.raca = raca;
 	}
 
