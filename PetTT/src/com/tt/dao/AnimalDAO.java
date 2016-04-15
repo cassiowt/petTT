@@ -40,11 +40,16 @@ public class AnimalDAO {
 
 			fabrica.getTransaction().begin();
 			Animal animalDB = fabrica.find(Animal.class, animal.getId());
-			fabrica.remove(animalDB);
+			
+			if (animalDB != null) {
+				fabrica.remove(animalDB);
+			}
+
 			fabrica.getTransaction().commit();
 			fabrica.close();
 			return true;
 		}
+
 		return false;
 	}
 }
