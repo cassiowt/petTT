@@ -58,10 +58,10 @@ public class AnimalMB {
 	
 	public Collection<Animal> listarAnimais() {
 		boolean ok = false;
-		/*
-		 * Collection<Animal> animais = animalDAO.getAnimal();
-		 */
-		Collection<Animal> animais = new ArrayList<Animal>();
+		
+		Collection<Animal> animais = animalDAO.listar();
+		 
+/*		Collection<Animal> animais = new ArrayList<Animal>();
 		Raca siames = new Raca();
 		Raca pitbull = new Raca();
 		Raca loro = new Raca();
@@ -70,7 +70,7 @@ public class AnimalMB {
 		Animal lorao = new Animal("Pedro", TipoAnimal.PASSARO, loro, "Verde");
 		animais.add(lorao);
 		animais.add(cao);
-		animais.add(bobby);
+		animais.add(bobby);*/
 
 		if (animais == null) {
 			System.out.println("SEM ANIMAIS PARA LISTAR");
