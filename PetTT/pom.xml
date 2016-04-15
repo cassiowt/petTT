@@ -62,6 +62,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.3-1103-jdbc4</version>
 		</dependency>	
-				
+		
 	</dependencies>
 </project>

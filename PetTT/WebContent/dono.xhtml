@@ -16,7 +16,7 @@
 			style="margin-bottom:10px;">
 			<p:messages id="messages" />
 			<h:panelGrid columns="2" cellpadding="5">
-			
+
 				<h:outputLabel for="nome" value="Nome:" />
 				<p:inputText id="nome" required="true" />
 
@@ -34,10 +34,10 @@
 			</h:panelGrid>
 		</p:panel>
 
-		<p:commandButton value="Cadastrar" update="panel" />
-		<p:button outcome="index.xhtml" value="cancelar"
-		icon="ui-icon-star">
-	</p:button>
+		<p:button outcome="listadono.xhtml" value="cadastrar">
+		</p:button>
+		<p:button outcome="index.xhtml" value="cancelar">
+		</p:button>
 	</h:form>
 </body>
 </html>
