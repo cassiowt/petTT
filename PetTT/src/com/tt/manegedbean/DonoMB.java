@@ -1,4 +1,4 @@
-package com.tt.model;
+package com.tt.manegedbean;
 
 import java.io.Serializable;
 
@@ -8,6 +8,7 @@ import javax.faces.model.ArrayDataModel;
 import javax.faces.model.DataModel;
 
 import com.tt.dao.DonoDAO;
+import com.tt.model.Dono;
 
 @ManagedBean(name = "donoMB")
 @SessionScoped

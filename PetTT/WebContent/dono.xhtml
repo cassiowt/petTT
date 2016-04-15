@@ -19,7 +19,7 @@
 			<h:panelGrid columns="2" cellpadding="5">
 
 				<h:outputLabel for="nome" value="Nome:" />
-				<p:inputText id="nome" required="true" />
+				<p:inputText id="nome" required="true" value="#{donoMB.dono.nome}"/>
 
 				<p:outputLabel for="telefone" value="Telefone:" />
 				<p:inputText id="telefone" required="true" />
@@ -30,7 +30,7 @@
 			</h:panelGrid>
 			<p:outputLabel for="animal" value="Animal:" />
 			<p:selectOneMenu id="animal" style="width:125px">
-				<f:selectItem itemLabel="Select One" itemValue="" />
+				<f:selectItems value="#{animalMB.listarAnimais()}" var="animal" itemLabel="#{animal.apelido}" itemValue="#{animal.id}"/>
 			</p:selectOneMenu>
 		</p:panel>
 
