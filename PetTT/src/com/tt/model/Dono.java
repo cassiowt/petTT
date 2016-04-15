@@ -11,11 +11,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "DONOS")
+@NamedQuery(name="queryDono", query="SELECT d FROM Dono d")
 public class Dono implements Serializable {
 	private static final long serialVersionUID = -3884254578509670471L;
 

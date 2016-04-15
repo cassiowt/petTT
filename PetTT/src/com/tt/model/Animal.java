@@ -12,11 +12,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "ANIMAIS")
+@NamedQuery(name="queryAnimais", query="SELECT a FROM Animal a")
 public class Animal implements Serializable {
 	private static final long serialVersionUID = 8323525015276295004L;
 
