@@ -15,6 +15,7 @@
 		<p:panel id="panel" header="Cadastro do Dono"
 			style="margin-bottom:10px;">
 			<p:messages id="messages" />
+
 			<h:panelGrid columns="2" cellpadding="5">
 
 				<h:outputLabel for="nome" value="Nome:" />
@@ -26,18 +27,16 @@
 				<p:outputLabel for="endereco" value="Endereço:" />
 				<p:inputText id="endereco" required="true" />
 
-				<p:outputLabel for="animal" value="Animal:" />
-				<p:selectOneMenu id="animal" style="width:125px">
-					<f:selectItem itemLabel="Select One" itemValue="" />
-				</p:selectOneMenu>
-
 			</h:panelGrid>
+			<p:outputLabel for="animal" value="Animal:" />
+			<p:selectOneMenu id="animal" style="width:125px">
+				<f:selectItem itemLabel="Select One" itemValue="" />
+			</p:selectOneMenu>
 		</p:panel>
 
-		<p:button outcome="listadono.xhtml" value="cadastrar">
-		</p:button>
-		<p:button outcome="index.xhtml" value="cancelar">
-		</p:button>
+		<p:commandButton value="Enviar" update="panel" action="listadono.xhtml" />
+		<p:commandButton value="Cancelar" update="panel" />
+		
 	</h:form>
 </body>
 </html>
