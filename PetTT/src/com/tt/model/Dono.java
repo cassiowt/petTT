@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
@@ -35,7 +36,7 @@ public class Dono implements Serializable {
 	@Column(name = "ENDERECO", length = 255, nullable = false)
 	private String endereco;
 	
-	@OneToMany
+	@OneToMany(cascade = {CascadeType.PERSIST})
 	@JoinColumn(name="DONO_ID",foreignKey=@ForeignKey(name="FK_ANIMAIS_DONO_ID"))
 	private Collection<Animal> animais = new ArrayList<Animal>();
 
