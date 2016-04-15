@@ -1,5 +1,8 @@
 package com.tt.dao;
 
+import java.util.Collection;
+
+import javax.management.Query;
 import javax.persistence.EntityManager;
 
 import com.tt.control.JpaUtil;
@@ -22,5 +25,26 @@ public class AnimalDAO {
 		}
 		return ok;
 
+	}
+
+	@SuppressWarnings("unchecked")
+	public Collection<Animal> listar() {
+
+		Query query = (Query) fabrica.createNamedQuery("queryAnimais");
+		return ((javax.persistence.Query) query).getResultList();
+	}
+
+	public boolean remover(Animal animal) {
+
+		if (animal != null) {
+
+			fabrica.getTransaction().begin();
+			Animal animalDB = fabrica.find(Animal.class, animal.getId());
+			fabrica.remove(animalDB);
+			fabrica.getTransaction().commit();
+			fabrica.close();
+			return true;
+		}
+		return false;
 	}
 }
