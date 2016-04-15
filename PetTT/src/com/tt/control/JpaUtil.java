@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.tt.model.Dono;
+
 public class JpaUtil {
 	private static  EntityManager em;
 	private static  EntityManagerFactory factory;
@@ -26,6 +28,13 @@ public class JpaUtil {
 	
 	public static void main(String[] args) {
 		getFactory().getTransaction().begin();
+		
+		Dono dono = new Dono("DONO #1", "TELEFONE #1", "ENDERECO #1", null);
+		
+		
+		
+		
+		
 		getFactory().getTransaction().commit();
 		getFactory().close();
 	}

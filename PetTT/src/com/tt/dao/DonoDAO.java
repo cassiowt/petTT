@@ -34,7 +34,11 @@ public class DonoDAO {
 			
 			fabrica.getTransaction().begin();
 			Dono donoDB = fabrica.find(Dono.class, dono.getId());			
-			fabrica.remove(donoDB);
+			
+			if(donoDB != null) {
+				fabrica.remove(donoDB);	
+			}
+			
 			fabrica.getTransaction().commit();
 			fabrica.close();
 			return true;

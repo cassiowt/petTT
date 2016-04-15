@@ -43,10 +43,11 @@ public class Dono implements Serializable {
 
 	}
 
-	public Dono(String nome, String telefone, String endereco) {
+	public Dono(String nome, String telefone, String endereco, Collection<Animal> animais) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.endereco = endereco;
+		this.animais = animais;
 	}
 
 	public Long getId() {
@@ -81,4 +82,11 @@ public class Dono implements Serializable {
 		this.endereco = endereco;
 	}
 
+	public Collection<Animal> getAnimais() {
+		return animais;
+	}
+
+	public void setAnimais(Collection<Animal> animais) {
+		this.animais = animais;
+	}
 }

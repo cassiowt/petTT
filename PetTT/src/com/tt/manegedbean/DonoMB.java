@@ -22,12 +22,7 @@ public class DonoMB implements Serializable {
 
 	public DonoMB() {
 		dono = new Dono();
-		donos = new ArrayDataModel(new Dono[]{
-			new Dono("João", "33224422", "rua blblbl"),
-			new Dono("João", "33224422", "rua blblbl"),
-			new Dono("João", "33224422", "rua blblbl"),
-			new Dono("João", "33224422", "rua blblbl")
-			});
+
 	}
 
 	public Dono getDono() {
