@@ -21,27 +21,27 @@
 			<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
 
 				<p:outputLabel for="apelido" value="Apelido:" />
-				<p:inputText id="apelido" required="true" />
+				<p:inputText id="apelido" required="true" value="#{animalMB.animal.apelido}"/>
 
 				<p:outputLabel for="tipo" value="Tipo:" />
-				<p:selectOneMenu id="tipo" value=" " style="width:125px"
+				<p:selectOneMenu id="tipo" value="#{animalMB.animal.tipoAnimal}" style="width:125px"
 					required="true">
 					<f:selectItem itemValue="" />
-					<f:selectItems value="#{animalMB.tipoAnimalValues}" />
+					<f:selectItems var="tpAnimal" value="#{animalMB.tipoAnimalValues}" />
 				</p:selectOneMenu>
 
 				<p:outputLabel for="raca" value="Raça:" />
-				<p:inputText id="raca" value=" " required="true" />
+				<p:inputText id="raca" value="#{animalMB.animal.raca}" required="true" />
 
 				<p:outputLabel for="caracteristicas" value="Características:" />
-				<p:inputTextarea id="caracteristicas" rows="6" cols="33" />
+				<p:inputTextarea id="caracteristicas" rows="6" cols="33" value="#{animalMB.animal.caracteristicas}"/>
 
 			</h:panelGrid>
 		</p:panel>
 
-		<p:button outcome="listaanimal.xhtml" value="Cadastrar" id="submitAnimalMB"
-			styleClass="ui-priority-primary" />
-		<!-- action="ir para Lista animal" -->
+		<p:commandButton outcome="listaanimal.xhtml" value="Cadastrar" id="submitAnimalMB"
+			styleClass="ui-priority-primary" action="#{animalMB.cadastrarAnimal()}"/>
+		
 
 		<p:button outcome="index.xhtml" value="Cancelar" id="voltar"
 			styleClass="ui-priority-primary" />

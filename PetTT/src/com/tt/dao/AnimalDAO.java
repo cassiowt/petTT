@@ -15,7 +15,7 @@ public class AnimalDAO {
 	public boolean cadastrar(Animal animal) {
 		boolean ok = false;
 
-		if (animal != null) {
+		if (animal.getApelido() != null) {
 			fabrica.getTransaction().begin();
 			fabrica.persist(animal);
 			fabrica.flush();
