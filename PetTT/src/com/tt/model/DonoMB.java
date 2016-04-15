@@ -7,6 +7,8 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.model.ArrayDataModel;
 import javax.faces.model.DataModel;
 
+import com.tt.dao.DonoDAO;
+
 @ManagedBean(name = "donoMB")
 @SessionScoped
 public class DonoMB implements Serializable {
@@ -15,7 +17,7 @@ public class DonoMB implements Serializable {
 
 	private Dono dono;
 	private DataModel donos;
-//	private DonoDAO donoDao;
+	private DonoDAO donoDao;
 
 	public DonoMB() {
 		dono = new Dono();
