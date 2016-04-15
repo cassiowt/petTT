@@ -23,4 +23,10 @@ public class JpaUtil {
 		return em;
 	}
 
+	
+	public static void main(String[] args) {
+		getFactory().getTransaction().begin();
+		getFactory().getTransaction().commit();
+		getFactory().close();
+	}
 }
